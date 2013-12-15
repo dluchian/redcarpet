@@ -1,9 +1,21 @@
 # Changelog
 
+* Yield the humanized id of the headers
+
+  Using the `header` callback, it's now possible to get access to the
+  humanized generated id to easily keep tracking of the tree of headers
+  or simply handle the duplicate values easily.
+
+  Since the `HTML_TOC` and `HTML` objects both have this callback, it's
+  advisable to define a module and mix it in these objects to avoid
+  code duplication.
+
+  *Robin Dupret*
+
 * Make ordered lists preceded by paragraph parsed with `:lax_spacing`
 
   Previously, enabling the `:lax_spacing` option, if a paragraph was
-  followed by an ordered list it was unparsed and was part of the 
+  followed by an ordered list it was unparsed and was part of the
   paragraph but this is no more the case.
 
   *Robin Dupret*
